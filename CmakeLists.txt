@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.23)
+
+project(cmake_wasm)
+
+set(CMAKE_CXX_STANDARD 17)
+
+set(EXPORT_LIBS
+    ""
+    CACHE INTERNAL "")
+
+add_subdirectory(./packages/package1)
+add_subdirectory(./packages/package2)
+
+message(${EXPORT_LIBS})
